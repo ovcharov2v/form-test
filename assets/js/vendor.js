@@ -1,1 +1,0 @@
-import IMask from 'imask';
