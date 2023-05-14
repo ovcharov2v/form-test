@@ -1,0 +1,18 @@
+@mixin input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid $color-gray-light;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color $transition-default;
+
+  &:hover {
+    border-color: lighten($color-cyan-dark, 10%);
+  }
+}
+
+@mixin input-active {
+  border-color: $color-cyan-dark;
+  outline: none;
+}

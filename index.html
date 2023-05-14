@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Test</title>
+  </head>
+  <body>
+    <section class="section container">
+      <h1 class="section__title">
+        <strong class="section__title-bold">Зарегистрируйтесь</strong>
+        и начните продавать услуги через интернет сегодня
+      </h1>
+      <form action="#" class="register-form">
+        <div class="register-form__row">
+          <!-- form group -->
+          <div class="form-group register-form__elem">
+            <label for="first-name" class="form-group__label">Имя</label>
+            <input type="text" class="form-group__input" id="first-name" name="first-name" placeholder="Сергей">
+          </div>
+          <!-- form group -->
+          <div class="form-group register-form__elem">
+            <label for="last-name" class="form-group__label">Фамилия</label>
+            <input type="text" class="form-group__input" id="last-name" name="last-name" placeholder="Миргород">
+          </div>
+        </div>
+        <!-- form group -->
+        <div class="form-group register-form__elem">
+          <label for="profession" class="form-group__label">Профессия</label>
+          <div class="profession-select">
+            <input type="text" class="form-group__input profession-select__input" id="profession" name="profession" placeholder="Парикмахер">
+            <ul class="profession-select__list">
+              <li class="profession-select__list-elem">Авиатор</li>
+              <li class="profession-select__list-elem">Автогонщик</li>
+              <li class="profession-select__list-elem">Автоинструктор</li>
+              <li class="profession-select__list-elem">Программист 1С</li>
+              <li class="profession-select__list-elem">Портной</li>
+              <li class="profession-select__list-elem">Портной</li>
+            </ul>
+          </div>
+        </div>
+        <!-- form group -->
+        <div class="form-group form-group--phone register-form__elem">
+          <label for="phone" class="form-group__label">Телефон</label>
+          <div class="form-group__box">
+            <div class="country-flag">
+              <div class="country-flag__value">
+                <img src="images/country-flags/RU.svg" alt="Россия" class="country-flag__icon">
+              </div>
+              <ul class="country-flag__list">
+                <li class="country-flag__list-elem country-flag__list-elem--active" data-country="ru">
+                  <img src="images/country-flags/RU.svg" alt="Россия" class="country-flag__icon">
+                </li>
+                <li class="country-flag__list-elem" data-country="by">
+                  <img src="images/country-flags/BY.svg" alt="Белоруссия" class="country-flag__icon">
+                </li>
+                <li class="country-flag__list-elem" data-country="kz">
+                  <img src="images/country-flags/KZ.svg" alt="Казахстан" class="country-flag__icon">
+                </li>
+                <li class="country-flag__list-elem" data-country="am">
+                  <img src="images/country-flags/AM.svg" alt="Армения" class="country-flag__icon">
+                </li>
+              </ul>
+            </div>
+            <input type="text" class="form-group__input form-group__input--phone" id="phone" name="phone">
+          </div>
+        </div>
+        <div class="register-form__submit-box">
+          <button class="button" type="submit">Зарегистрироваться</button>
+        </div>
+      </form>
+    </section>
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>

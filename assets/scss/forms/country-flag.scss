@@ -1,0 +1,76 @@
+.country-flag {
+  position: relative;
+  z-index: 0;
+
+  &__value { // .country-flag__value
+    @include input;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      width: 8px;
+      height: 8px;
+      border-style: solid;
+      border-color: $color-cyan-dark;
+      border-width: 0 1px 1px 0;
+      transform:  rotate(45deg) translateY(-50%);
+      transform-origin: 75%;
+      transition: transform $transition-default;
+      content: "";
+    }
+
+    &--focus {
+      @include input-active;
+      border-bottom-left-radius: 0;
+
+      &::before {
+        transform: translateY(-50%) rotate(225deg);
+      }
+    }
+  }
+
+  &__list { // .country-flag__list
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 100%;
+    display: none;
+    min-width: 100%;
+    background-color: $color-white;
+    border-style: solid;
+    border-color: $color-cyan-dark;
+    border-width: 0 1px 1px;
+    border-radius: 0 0 4px 4px;
+
+    .country-flag__value--focus + & {
+      display: block;
+    }
+  }
+
+  &__list-elem { // .country-flag__list-elem
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color $transition-default;
+
+    &:hover {
+      background-color: lighten($color-gray-light, 15%);
+    }
+
+    &--active { // .country-flag__list-elem--active
+      display: none;
+    }
+  }
+
+  &__icon { // .country-flag__icon
+    width: 20px;
+    user-select: none;
+  }
+}

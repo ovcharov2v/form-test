@@ -1,0 +1,38 @@
+.profession-select {
+  position: relative;
+
+  &__input { // .profession-select__input
+    .profession-select--dropdown-show & {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &__list { // .profession-select__list
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 100%;
+    display: none;
+    min-width: 100%;
+    background-color: $color-white;
+    border-style: solid;
+    border-color: $color-cyan-dark;
+    border-width: 0 1px 1px;
+    border-radius: 0 0 4px 4px;
+
+    .profession-select--dropdown-show & {
+      display: block;
+    }
+  }
+
+  &__list-elem { // .profession-select__list-elem
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color $transition-default;
+
+    &:hover {
+      background-color: lighten($color-gray-light, 15%);
+    }
+  }
+}

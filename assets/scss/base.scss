@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: 16px;
+  line-height: 1.3;
+  color: $color-black;
+}
