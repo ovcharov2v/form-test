@@ -5,9 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const professionInput = document.querySelector('.profession-select__input')
   professionInput.addEventListener('input', () => {
     const filteredProfession = []
-    if (professionInput.value.length > 0) {
+    const professionInputValue = professionInput.value.trim().toLowerCase()
+
+    if (professionInputValue.length > 0) {
       professions.every((profession) => {
-        if (profession.toLowerCase().startsWith(professionInput.value.toLowerCase())) {
+        if (profession.toLowerCase().startsWith(professionInputValue)) {
           filteredProfession.push(profession)
         }
         return filteredProfession.length < 5 // break loop
@@ -23,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
       professionSelect.classList.remove('profession-select--dropdown-show')
     }
   })
+
   const updateProfessionList = (professionArr) => {
     professionList.innerHTML = ''
     if (professionArr.length > 0) {
