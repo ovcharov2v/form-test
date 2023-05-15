@@ -71,6 +71,8 @@
 
   &__icon { // .country-flag__icon
     width: 20px;
+    height: 15px;
     user-select: none;
+    box-shadow: 0 0 3px $color-gray-light;
   }
 }
